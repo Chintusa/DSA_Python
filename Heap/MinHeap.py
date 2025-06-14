@@ -49,7 +49,12 @@ class MinHeap:
         self.heap[idx],self.heap[minChild]=self.heap[minChild],self.heap[idx] 
       idx=minChild
       
-
+  def heap_sort(self): 
+    sorted_list = [] 
+    for node in range(self.size): 
+        n = self.delete_root() 
+        sorted_list.append(n) 
+    return sorted_list
     
   def display(self):
     print("Heap array (1-based):", self.heap[1:])
@@ -61,6 +66,7 @@ for i in arr:
   minh.insert(i)
 
 minh.display()
+print("Heap Sort:",minh.heap_sort())
 
   
 
