@@ -1,0 +1,8 @@
+1>insert at beginning
+2>insert at end
+3>insert at a position
+4>insert before an element
+5>insert after an element
+6>display
+7>search element
+8>exit
