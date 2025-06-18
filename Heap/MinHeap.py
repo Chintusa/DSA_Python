@@ -50,9 +50,13 @@ class MinHeap:
       idx=minChild
       
   def heap_sort(self): 
+    myHeap = MinHeap()
+    myHeap.heap = self.heap.copy()
+    myHeap.size = self.size
+
     sorted_list = [] 
-    for node in range(self.size): 
-        n = self.delete_root() 
+    for _ in range(myHeap.size): 
+        n = myHeap.delete_root() 
         sorted_list.append(n) 
     return sorted_list
     
