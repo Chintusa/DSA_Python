@@ -47,7 +47,15 @@ class MaxHeap:
       if self.heap[idx] < self.heap[maxChild]:
         self.heap[idx],self.heap[maxChild]=self.heap[maxChild],self.heap[idx] 
       idx=maxChild
-    
+  def heap_sort(self): 
+      myHeap=MaxHeap()
+      myHeap.heap=self.heap.copy()
+      myHeap.size = self.size 
+      sorted_list = [] 
+      for _ in range(myHeap.size): 
+          n = myHeap.delete_root() 
+          sorted_list.append(n) 
+      return sorted_list 
   def display(self):
     print("Heap array (1-based):", self.heap[1:])
 
@@ -61,4 +69,5 @@ for i in arr:
 maxHeap.display()
 maxHeap.delete_element(16)
 maxHeap.display()
+print(maxHeap.heap_sort())
 
